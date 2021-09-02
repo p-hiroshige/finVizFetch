@@ -35,11 +35,11 @@ class finvizStreamer():
         #print('self.parsed_data : ', self.parsed_data)
 
         for ticker in tickers:
-            print('ticker inside for loop: ', ticker)
+            #print('ticker inside for loop: ', ticker)
             url = self.url + ticker
 
             req = Request(url = url, headers = {'user-agent': 'my-app'})
-            print ("request url:" +url)
+            #print ("request url:" +url)
             response = urlopen(req)
 
             html = BeautifulSoup(response, 'html')
